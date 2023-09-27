@@ -1,0 +1,202 @@
+@import url("https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Outline&family=DM+Sans:opsz@9..40&display=swap");
+
+body {
+	background: white;
+	display: flex;
+	flex-direction: column;
+	font-family: "DM Sans", sans-serif;
+	margin: 20px;
+	min-height: calc(100vh - 50px);
+}
+
+.border {
+	border: black solid 5px;
+}
+
+.borderBottom {
+	border-bottom: black solid 5px;
+}
+
+.borderTop {
+	border-top: black solid 5px;
+}
+
+.insideBorder {
+	box-shadow: 0px 0px 0px 5px black inset;
+}
+
+.insideBorderProtectionPadding {
+	padding: 0px 5px;
+}
+
+header {
+	align-content: center;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+	font-family: "Bungee Outline", cursive;
+	font-size: 150%;
+	color: blue;
+	margin-bottom: 10px;
+}
+
+main {
+	width: 70%;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	margin: auto auto;
+	gap: 10px;
+}
+
+.verticalLine {
+	border-left: 4px solid black;
+	height: 175px;
+	left: 50%;
+	margin-left: -2px;
+	top: 0;
+}
+
+.username {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+}
+
+.sectionStyles {
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	flex-direction: column;
+}
+
+.sectionLarge {
+	width: 100%;
+	max-width: 1000px;
+	margin: 0 auto;
+}
+
+.sectionLarge > div {
+	display: flex;
+	justify-content: space-between;
+}
+
+.smallBoxPadding > div {
+	gap: 10px;
+}
+
+.smallBox {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+
+.smallBox > h3 {
+	text-align: center;
+}
+
+.smallBox > div > ul {
+	list-style-type: none;
+	padding-inline-start: 0px;
+}
+
+.smallBox > div {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	padding: 5px 10px;
+}
+
+.rightAlignText {
+	text-align: right;
+}
+
+.smallBox > p {
+	text-align: center;
+	padding: 0 5px;
+}
+
+#famousQuote {
+	text-align: center;
+	padding: 0 5px;
+}
+
+footer {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	width: 100%;
+	margin-top: 10px;
+}
+
+footer > a {
+	color: black;
+}
+footer > a:hover {
+	color: white;
+}
+
+@media screen and (max-width: 750px) {
+	main {
+		width: 95%;
+	}
+}
+
+@media screen and (max-width: 550px) {
+	.sectionLarge > div {
+		flex-direction: column;
+	}
+
+	.verticalLine {
+		display: none;
+	}
+
+	.username {
+		flex-direction: column;
+		align-items: center;
+	}
+
+	.smallBox {
+		width: 100%;
+		margin-bottom: 10px;
+	}
+
+	.sectionLarge {
+		width: 100%;
+		max-width: none;
+		margin: 0;
+	}
+
+	.smallBox.border {
+		border: none;
+		box-shadow: 0px 0px 0px 5px black inset;
+	}
+
+	.insideBorderProtectionPadding {
+		padding: 0;
+	}
+
+	.smallBoxPadding > div {
+		gap: 0;
+	}
+
+	.smallBox > p {
+		text-align: center;
+		padding: 0 30px;
+	}
+
+	#famousQuote {
+		text-align: center;
+		padding: 0 30px;
+	}
+
+	footer {
+		margin-top: 0px;
+	}
+
+	h1 {
+		text-align: center;
+	}
+}

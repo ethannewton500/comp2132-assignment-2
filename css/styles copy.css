@@ -1,0 +1,113 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,400;9..40,700&display=swap');
+
+body {
+	background: lightblue;
+	display: flex;
+	flex-direction: column;
+    font-family: 'DM Sans', sans-serif;
+	margin: 0;
+	min-height: 100vh;
+}
+
+header {
+	align-content: center;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	justify-content: center;
+}
+
+main {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+#username {
+    text-align: center;
+}
+
+.sectionStyles {
+    background: rgba(0, 0, 0, 0.2);
+	border-radius: 4px;
+	box-shadow: 8px 8px 5px #313131;
+	display: flex;
+	flex-direction: column;
+}
+
+.sectionLarge {
+    width: 100%;
+    max-width: 1000px;
+    margin: 20px auto;
+}
+
+.sectionLarge > div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.sectionSmall {
+    width: 48%;
+    padding-top: 0;
+}
+
+.smallBox {
+    display: flex;
+    flex-direction: column;
+
+    width: 48%;
+}
+
+.smallBox > h3 {
+    text-align: center;
+}
+
+.smallBox > div >ul {
+    list-style-type: none;
+    padding-inline-start: 0px;
+}
+
+.smallBox > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 5px 10px;
+}
+
+.rightAlignText {
+    text-align: right;
+}
+
+.smallBox > p{
+    text-align: center;
+}
+
+#famousQuote {
+    text-align: center;
+}
+
+footer {
+	align-items: center;
+	background: rgba(0, 0, 0, 0.2);
+	display: flex;
+	height: 60px;
+	justify-content: center;
+	margin-top: auto;
+	width: 100%;
+}
+
+footer>a {
+    color: black;
+}
+footer>a:hover {
+    color: white;
+}
+
+@media screen and (max-width: 1000px){
+
+}
+
+@media screen and (max-width: 700px) {
+
+}

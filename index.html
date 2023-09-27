@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<meta content="ie=edge" http-equiv="X-UA-Compatible" />
+		<title>Ethan Newton - Home</title>
+		<link href="css/styles.css" rel="stylesheet" />
+		<script defer="defer" src="scripts/javascript_message.js"></script>
+		<script defer="defer" src="scripts/comp2132-assignment02.js"></script>
+	</head>
+
+	<body class="border">
+		<header class="borderBottom">
+			<h1>Sinister Sound</h1>
+		</header>
+		<main>
+			<div>
+				<section class="sectionLarge sectionStyles insideBorder">
+					<h2 class="username">Username:&nbsp;<span id="username"></span></h2>
+					<div class="largePadding">
+						<div class="smallBox insideBorderProtectionPadding">
+							<h3>User Data</h3>
+							<div>
+								<ul>
+									<li>Age:</li>
+									<li>Ticket Quantity:</li>
+									<li>Cash Available:</li>
+								</ul>
+								<ul class="rightAlignText">
+									<li id="userDataAge"></li>
+									<li id="userDataQuantity"></li>
+									<li id="userDataCashCad">$</li>
+								</ul>
+							</div>
+						</div>
+						<div class="verticalLine"></div>
+						<div class="smallBox insideBorderProtectionPadding">
+							<h3>Concert Data</h3>
+							<div>
+								<ul>
+									<li>Minimum Age:</li>
+									<li>Tax Rate:</li>
+									<li>Cost Per Ticket:</li>
+								</ul>
+								<ul class="rightAlignText">
+									<li id="concertDataAge"></li>
+									<li id="concertDataTax"></li>
+									<li id="concertDataCost">$</li>
+								</ul>
+							</div>
+						</div>
+					</div>
+					<p id="famousQuote"></p>
+				</section>
+			</div>
+			<section class="sectionLarge smallBoxPadding">
+				<div>
+					<div class="smallBox sectionStyles border">
+						<h3>Processing</h3>
+						<div>
+							<ul>
+								<li>Before Tax Cost:</li>
+								<li>After Tax Cost:</li>
+							</ul>
+							<ul class="rightAlignText">
+								<li id="beforeTaxCost">$</li>
+								<li id="afterTaxCost">$</li>
+							</ul>
+						</div>
+						<p id="affordMessage"></p>
+						<p id="ageMessageGood"></p>
+					</div>
+					<div class="smallBox sectionStyles border">
+						<h3>Results</h3>
+						<p id="purchaseOutcome"></p>
+						<p id="messageBad"></p>
+					</div>
+				</div>
+			</section>
+		</main>
+		<footer class="borderTop">
+			<a href="www.bcit.ca">BCIT Homepage</a>
+		</footer>
+	</body>
+</html>
