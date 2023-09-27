@@ -32,7 +32,9 @@ let newFamousQuote = userName + " says: " + '"I can\'t wait for the show!"';
 let beforeTaxCost;
 let afterTaxCost;
 
-let purchaseOutcome;
+let purchaseOutcomeCost;
+let purchaseOutcomeAge;
+let remainingBalance;
 
 beforeTaxCost = quantityOfTickets * ticketCostDollarsCDN;
 afterTaxCost = beforeTaxCost + beforeTaxCost * taxRate;
@@ -51,27 +53,31 @@ document.getElementById("beforeTaxCost").innerHTML += beforeTaxCost;
 document.getElementById("afterTaxCost").innerHTML += afterTaxCost;
 
 if (
-	quantityOfTickets * ticketCostDollarsCDN + quantityOfTickets * ticketCostDollarsCDN * taxRate <=
+	(quantityOfTickets * ticketCostDollarsCDN) + (quantityOfTickets * ticketCostDollarsCDN * taxRate) <=
 	cashOnHandDollarsCDN
 ) {
 	document.getElementById("affordMessage").innerHTML = "You are able to afford the tickets!";
+	purchaseOutcomeCost = true;
 } else {
-	document.getElementById("messageBad").innerHTML += "You are not able to afford the tickets!<br><br>";
+	remainingBalance = ((quantityOfTickets * ticketCostDollarsCDN) + (quantityOfTickets * ticketCostDollarsCDN * taxRate)) - cashOnHandDollarsCDN;
+
+	document.getElementById("messageBad").innerHTML += "You are not able to afford the tickets!<br><br> You need " + remainingBalance + " more dollars";
+	purchaseOutcomeCost = false;
 }
 
 if (age > minimumAgeToAttend) {
 	document.getElementById("ageMessageGood").innerHTML = "You are more than old enough to attend the concert!";
-	purchaseOutcome = true;
+	purchaseOutcomeAge = true;
 } else if (age == minimumAgeToAttend) {
 	document.getElementById("ageMessageGood").innerHTML = "You are the exact age to attend the concert!";
-	purchaseOutcome = true;
+	purchaseOutcomeAge = true;
 } else {
 	document.getElementById("messageBad").innerHTML +=
 		"You are too young to attend the concert by " + (minimumAgeToAttend - age) + " years!";
-	purchaseoutcome = true;
+	purchaseoutcomeAge = true;
 }
 
-if (purchaseOutcome == true) {
+if (purchaseOutcomeAge == true && purchaseOutcomeCost == true) {
 	document.getElementById("purchaseOutcome").innerHTML = "Congratulations we were able to process your purchase!";
 } else {
 	document.getElementById("purchaseOutcome").innerHTML =
